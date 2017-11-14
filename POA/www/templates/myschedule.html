@@ -1,0 +1,54 @@
+<ion-view ng-controller="MyscheduleCtrl">
+
+
+    <ion-header-bar align-title="left" class="bar bar-header bar-assertive">
+      <div class="buttons">
+        <a  href="#/app/dashboard" nav-direction="back">
+          <button class="button button-icon icon ion-ios-arrow-back" ></button></a>
+      </div>
+      <h1 class="title">MY SCHEDULES</h1>
+
+      <div class="buttons">
+        <a  href="#/app/evenschedule" nav-direction="back">
+          <button class="button button-icon icon ion-plus-round" ></button></a>
+      </div>
+
+    </ion-header-bar>
+
+
+
+
+    <ion-content class="padding" style="margin-left: 10px;margin-right: 10px">
+
+
+        <ul class="list">
+
+            <li class="card" style="margin: 0 0 0 0 !important" ng-repeat="session in session_data">
+
+
+                <div ng-click="gotolecture(session_data[$index].id, $index)" class="padding color_blue" style="width: 100%">
+
+                    <p style="color: white; font-size: 16px"> {{session_data[$index].title}} </p>
+                    <p style="color: white; font-size: 12px"> {{session_data[$index].date}} </p>
+                    <p style="color: white; font-size: 12px"> {{session_data[$index].time_from}} - {{session_data[$index].time_from}} </p>
+                    <p style="color: white; font-size: 12px"> {{session_data[$index].room}} </p>
+                </div>
+
+            </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+
+
+    </ion-content>
+
+
+  </ion-view>
+

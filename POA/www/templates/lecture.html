@@ -1,0 +1,193 @@
+<ion-view ng-controller="LectureCtrl">
+
+  <ion-header-bar align-title="left" class="bar bar-header bar-assertive">
+    <div class="buttons">
+      <a  ng-click="back()" nav-direction="back">
+        <button class="button button-icon icon ion-ios-arrow-back" ></button></a>
+    </div>
+    <h1 class="title">SCHEDULES</h1>
+
+    <div class="buttons">
+      <a  ng-click="btn_gotomyschedule()" nav-direction="back">
+        <button class="button button-icon icon ion-calendar" ></button></a>
+    </div>
+
+  </ion-header-bar>
+
+
+
+
+  <ion-content lazy-scrollbar-x="false" scrollbar-y="false">
+
+
+
+    <div style="height: 160px" class="bg_lecture_img">
+
+      <div style="padding-top: 25px">
+        <center><b><a style="color: white;font-size: 18px">{{session_data[session_index].title}}</a></b></center>
+        <center><b><a style="color: white">{{session_data[session_index].date}}</a></b></center>
+        <center><b><a style="color: white">{{session_data[session_index].time_from}} - {{session_data[session_index].time_to}}</a></b></center>
+      </div>
+
+    </div>
+
+
+    <div ng-show="form_add_to_schedule" ng-click="addtomyschedule(session_index)" style="width: 100%; height: 35px" class="color_blue">
+
+         <div style="height: 8px"></div>
+      <center><b><a style="color: white">ADD TO MY SCHEDULE</a></b></center>
+
+    </div>
+
+
+    <div ng-show="form_remove_to_schedule" ng-click="removetoschedule(session_index)" style="width: 100%; height: 35px; background-color: red">
+
+      <div style="height: 8px"></div>
+      <center><b><a style="color: white">REMOVE TO MY SCHEDULE</a></b></center>
+
+    </div>
+
+
+    <div class="padding" style="margin-left: 10px;margin-right: 10px">
+
+
+
+
+
+
+      <div style="margin-bottom: 100px; position: relative" ng-show="form_note">
+        <a style="color: black; font-size: 20px"><b>Notes</b></a>
+
+        <textarea id="text_open_forum" rows="6" style="border-color: gray; border: solid; border-width: .5px; padding: 5px; width: 100%">
+      </textarea>
+
+
+        <button ng-click="submit_openforum()" class="button button-block button color_green" style="width: 50%; margin-top: 20px; position: absolute; right: 0px">
+          <b> <a style="color: white">Submit</a> </b>
+        </button>
+
+
+      </div>
+
+
+      <div>
+
+
+
+        <a style="color: black; font-size: 20px">CPD Unit/s: {{session_data[session_index].cpd}}</a>
+
+        <br>
+        <br>
+
+        <a style="color: black; font-size: 20px"><b>Lectures</b></a>
+
+
+
+        <ul ng-show="list_to_add" class="list">
+
+          <li class="card" style="margin: 15px 0 0 0 !important" ng-repeat="lecture in session_data_lecture">
+
+
+            <div class="padding color_blue" style="width: 100%">
+
+              <p style="color: white; font-size: 16px"> {{session_data_lecture[$index].lecture_title}} </p>
+              <p style="color: white; font-size: 12px"> {{session_data_lecture[$index].my_lecture_time_from}} - {{session_data_lecture[$index].my_lecture_time_to}} </p>
+
+              <img src="img/imgprofile.png" width="20%" height="20%"/>
+            </div>
+
+          </li>
+
+
+        </ul>
+
+
+
+
+
+
+        <ul ng-show="list_add" class="list">
+
+          <li class="card" style="margin: 15px 0 0 0 !important" ng-repeat="lecture in session_data_lecture">
+            <div class="padding color_blue" style="width: 100%">
+
+            <div class="row">
+
+              <div class="col-75">
+
+
+                  <p style="color: white; font-size: 16px"> {{session_data_lecture[$index].lecture_title}} </p>
+                  <p style="color: white; font-size: 12px"> {{session_data_lecture[$index].my_lecture_time_from}} - {{session_data_lecture[$index].my_lecture_time_to}} </p>
+
+                  <img src="img/imgprofile.png" width="15%"/>
+
+
+              </div>
+
+
+
+
+              <div class="col-30">
+
+                <!--
+                <button ng-click="opensurvey($index)" class="button button-block button yellow_color" style="width: 100%">
+                  <b> <a style="color: white">Survey</a> </b>
+                </button>
+                <button ng-click="getabstract($index)" class="button button-block button color_green" style="width: 100%">
+                  <b> <a style="color: white">Abstract</a> </b>
+                </button>
+                <button ng-click="getothers($index)" class="button button-block button color_green" style="width: 100%">
+                  <b> <a style="color: white">Others</a> </b>
+                </button>
+                -->
+
+
+                <div ng-click="opensurvey($index)" class="yellow_color" style="padding-top: 5px; padding-bottom: 5px; padding-left: 15px; padding-right: 15px">
+                  <b> <a style="color: white">Survey</a> </b>
+                </div>
+                <div ng-click="getabstract($index)" class="color_green" style="padding-top: 5px; padding-bottom: 5px; padding-left: 15px; padding-right: 15px; margin-top: 5px">
+                  <b> <a style="color: white">Abstract</a> </b>
+                </div>
+                <div ng-click="getothers($index)" class="color_green" style="padding-top: 5px; padding-bottom: 5px; padding-left: 15px; padding-right: 15px; margin-top: 5px">
+                  <b> <a style="color: white">Others</a> </b>
+                </div>
+
+
+              </div>
+
+
+            </div>
+
+
+          </li>
+
+
+        </ul>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </ion-content>
+
+
+</ion-view>

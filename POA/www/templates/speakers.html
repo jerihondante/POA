@@ -1,0 +1,55 @@
+<ion-view ng-controller="SpeakersCtrl">
+
+
+
+  <ion-header-bar class="bar-light bar-subheader">
+    <input type="search" style="width: 100%; margin-right: 20px;margin-left: 20px" placeholder="Search..." ng-model="search">
+    <button ng-if="search.length" class="button button-icon ion-android-close input-button" ng-click="clearSearch()">
+    </button>
+  </ion-header-bar>
+
+
+
+  <ion-content class="padding" style="margin-left: 10px;margin-right: 10px">
+
+
+
+
+    <ul class="list">
+
+      <li  class="card" style="margin: 15px 0 0 0 !important" ng-repeat="item in speakers_list | searchContacts2:search">
+
+
+        <a ng-click="gotospeakers(item.id)" class="item item-thumbnail-left item-icon-right">
+
+          <img ng-src="http://philortho.com{{item.avatar}}" onerror="this.src='img/imgprofile.png'">
+          <h2>{{item.speaker_name}}</h2>
+          <div style="position: relative">
+              <p style="font-size: 80px; position: absolute">⋆</p>
+              <p style="font-size: 16px; position: absolute; margin-left: 30px">5</p>
+
+            </div>
+
+          </div>
+
+            <p style="margin-top: 30px">{{item.speaker_info}}</p>
+
+            <i class="icon ion-chevron-right"></i>
+
+        </a>
+
+
+
+      </li>
+
+
+    </ul>
+
+
+
+  </ion-content>
+
+
+
+
+</ion-view>

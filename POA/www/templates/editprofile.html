@@ -1,0 +1,167 @@
+<ion-view style="background-color: #f9f9f9" ng-controller="EditprofileCtrl">
+
+
+  <ion-content>
+
+
+
+
+    <div class="padding">
+
+
+
+      <div class="row">
+
+        <div class="col-50">
+
+          <div class="padding" style="position: relative; width: 90%; height: 90%">
+
+            <img style="position: absolute; width: 70%" src="img/imgprofile.png"/>
+
+            <img style="position: absolute; width: 20%; left: 80px; top: 90px" src="img/icon_camera.png"/>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-50">
+
+         <div style="margin-top: 30px"></div>
+          <div style="background-color: #0077B5; height: 30px; padding-top: 4px">
+
+         <center><p style="color: white">Import Linkedin Profile</p></center>
+
+          </div>
+
+
+
+          <div style="background-color: #3b5998; height: 30px; margin-top: 10px; padding-top: 4px">
+
+            <center><p style="color: white">Import Facebook Profile</p></center>
+
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+      <div style="margin-top: 40px" class="padding">
+        First Name
+        <label class="item item-input">
+          <input style="padding-left: 10px; height: 25px" id="txt_first_name" type="text" placeholder="First Name" value="{{user_profile.first_name}}">
+
+        </label>
+        <br>
+
+        Middle Name
+        <label class="item item-input">
+          <input style="padding-left: 10px; height: 25px" id="txt_middle_name" type="text" placeholder="Middle Name" value="{{user_profile.middle_initial}}">
+        </label>
+        <br>
+
+        Last Name
+        <label class="item item-input">
+          <input style="padding-left: 10px" id="txt_last_name" type="text" placeholder="Last Name" value="{{user_profile.last_name}}">
+        </label>
+        <br>
+
+        Suffix
+        <label class="item item-input">
+          <input style="padding-left: 10px" id="txt_suffix" type="text" placeholder="Suffix" value="{{user_profile.suffix}}">
+        </label>
+        <br>
+
+        Email Address
+        <label class="item item-input">
+          <input style="padding-left: 10px" id="txt_email_address" type="text" placeholder="Email Address" value="{{user_profile.email}}">
+        </label>
+        <br>
+
+
+        City
+        <label class="item item-input">
+          <input style="padding-left: 10px" id="txt_city" type="text" placeholder="City" value="{{user_profile.address}}">
+        </label>
+        <br>
+
+        Title
+        <label class="item item-input">
+          <input style="padding-left: 10px" id="txt_title" type="text" placeholder="Title" value="{{user_profile.title}}">
+        </label>
+        <br>
+
+
+        Profession
+        <label class="item item-input">
+          <input style="padding-left: 10px" id="txt_profession" type="text" placeholder="Profession" value="{{user_profile.profession}}">
+        </label>
+        <br>
+
+
+        Chapter
+        <label class="item item-input">
+          <input style="padding-left: 10px" id="txt_chapter" type="text" placeholder="Chapter" value="{{user_profile.chapter}}">
+        </label>
+        <br>
+
+
+        Subspecialty
+        <label class="item item-input">
+          <input style="padding-left: 10px" id="txt_subspecialty" type="text" placeholder="Subspecialty" value="{{user_profile.subspecialty}}">
+        </label>
+        <br>
+
+
+
+
+
+        <label>Professional Description</label><br>
+        <textarea id="txt_comments" name="txt_comments" rows="10" cols="50" style="border: solid; border-color: #dddddd; padding: 5px" >{{user_profile.description}}
+        </textarea>
+
+
+
+
+
+        <button ng-click="saveeditprofile()" class="button button-block button yellow_color" style="width: 100%; margin-top: 20px">
+          <b> <a style="color: white">SAVE</a> </b>
+        </button>
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+    <div class="color_green ite"  style="margin-top: 5px; padding-left: 20px; padding-bottom: 1px; padding-top: 10px">
+
+
+      <b><p style="color: white"> 2017 PHILORTHQ Designed by EWM</p></b>
+
+
+    </div>
+
+
+
+  </ion-content>
+</ion-view>

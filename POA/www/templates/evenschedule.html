@@ -1,0 +1,126 @@
+<ion-view ng-controller="EventscheduleCtrl">
+
+
+
+
+
+  <div class="tabs tabs-top">
+    <a ng-click="bnt_date_1()" class="tab-item">
+      <b><p style="color: black">Nov 15</p></b>
+    </a>
+    <a ng-click="bnt_date_2()" class="tab-item">
+      <b><p style="color: black">Nov 16</p></b>
+    </a>
+    <a ng-click="bnt_date_3()" class="tab-item">
+      <b><p style="color: black">Nov 17</p></b>
+    </a>
+    <a ng-click="bnt_date_4()" class="tab-item">
+      <b><p style="color: black">Nov 18</p></b>
+    </a>
+  </div>
+
+
+
+
+
+
+  <ion-content class="padding has-subheader" style="margin-left: 10px;margin-right: 10px">
+
+
+
+
+    <ul ng-show="btn_session_1" class="list">
+
+      <li class="card" style="margin: 15px 0 0 0 !important" ng-repeat="session in session_data" ng-if="session_data[$index].date == '11/15/2017'">
+
+
+        <div ng-click="gotolecture(session_data[$index].id, $index)" class="padding color_blue" style="width: 100%">
+
+         <p style="color: white; font-size: 16px"> {{session_data[$index].title}} </p>
+          <p style="color: white; font-size: 12px"> {{session_data[$index].date}} </p>
+          <p style="color: white; font-size: 12px"> {{session_data[$index].time_from}} - {{session_data[$index].time_to}} </p>
+          <p style="color: white; font-size: 12px"> {{session_data[$index].room}} </p>
+        </div>
+
+      </li>
+
+
+    </ul>
+
+
+
+    <ul ng-show="btn_session_2" class="list">
+
+      <li class="card" style="margin: 15px 0 0 0 !important" ng-repeat="session in session_data" ng-if="session_data[$index].date == '11/16/2017'">
+
+
+        <div ng-click="gotolecture(session_data[$index].id, $index)" class="padding color_blue" style="width: 100%">
+
+          <p style="color: white; font-size: 16px"> {{session_data[$index].title}} </p>
+          <p style="color: white; font-size: 12px"> {{session_data[$index].date}} </p>
+          <p style="color: white; font-size: 12px"> {{session_data[$index].time_from}} - {{session_data[$index].time_to}} </p>
+          <p style="color: white; font-size: 12px"> {{session_data[$index].room}} </p>
+        </div>
+
+      </li>
+
+
+    </ul>
+
+
+
+
+
+
+
+    <ul ng-show="btn_session_3" class="list">
+
+      <li class="card" style="margin: 15px 0 0 0 !important" ng-repeat="session in session_data" ng-if="session_data[$index].date == '11/17/2017'">
+
+
+        <div ng-click="gotolecture(session_data[$index].id, $index)" class="padding color_blue" style="width: 100%">
+
+          <p style="color: white; font-size: 16px"> {{session_data[$index].title}} </p>
+          <p style="color: white; font-size: 12px"> {{session_data[$index].date}} </p>
+          <p style="color: white; font-size: 12px"> {{session_data[$index].time_from}} - {{session_data[$index].time_from}} </p>
+          <p style="color: white; font-size: 12px"> {{session_data[$index].room}} </p>
+        </div>
+
+      </li>
+
+
+    </ul>
+
+
+
+
+
+    <ul ng-show="btn_session_4" class="list">
+
+      <li class="card" style="margin: 15px 0 0 0 !important" ng-repeat="session in session_data" ng-if="session_data[$index].date == '11/18/2017'">
+
+
+        <div ng-click="gotolecture(session_data[$index].id, $index)" class="padding color_blue" style="width: 100%">
+
+          <p style="color: white; font-size: 16px"> {{session_data[$index].title}} </p>
+          <p style="color: white; font-size: 12px"> {{session_data[$index].date}} </p>
+          <p style="color: white; font-size: 12px"> {{session_data[$index].time_from}} - {{session_data[$index].time_from}} </p>
+          <p style="color: white; font-size: 12px"> {{session_data[$index].room}} </p>
+        </div>
+
+      </li>
+
+
+    </ul>
+
+
+
+
+
+  </ion-content>
+
+
+
+
+
+</ion-view>

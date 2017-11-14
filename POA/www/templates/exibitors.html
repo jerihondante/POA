@@ -1,0 +1,46 @@
+<ion-view ng-controller="ExibitorsCtrl">
+
+
+  <ion-header-bar class="bar-light bar-subheader">
+    <input type="search" style="width: 100%; margin-right: 20px;margin-left: 20px" placeholder="Search..." ng-model="search">
+    <button ng-if="search.length" class="button button-icon ion-android-close input-button" ng-click="clearSearch()">
+    </button>
+  </ion-header-bar>
+
+
+
+  <ion-content class="padding" style="margin-left: 10px;margin-right: 10px">
+
+
+
+
+    <ul class="list">
+
+      <li  class="card" style="margin: 15px 0 0 0 !important" ng-repeat="item in exibitors_list | searchContacts:search">
+
+
+        <a ng-click="gotoexibitors($index)" class="item item-icon-right">
+          <h2>{{item.company_name}}</h2>
+          <p>{{item.maproom}}</p>
+
+          <i class="icon ion-chevron-right"></i>
+
+        </a>
+
+
+
+      </li>
+
+
+    </ul>
+
+
+
+  </ion-content>
+
+
+
+
+</ion-view>
+
+

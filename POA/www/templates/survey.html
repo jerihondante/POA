@@ -1,0 +1,49 @@
+<ion-view ng-controller="SurveyCtrl">
+
+  <ion-header-bar align-title="left" class="bar bar-header bar-assertive">
+    <div class="buttons">
+      <a ng-click="back()" nav-direction="back">
+        <button class="button button-icon icon ion-ios-arrow-back" ></button></a>
+    </div>
+    <h1 class="title">Survey</h1>
+
+
+
+  </ion-header-bar>
+
+
+
+
+  <ion-content class="padding" lazy-scrollbar-x="false" scrollbar-y="false">
+
+
+
+
+
+
+    <h4>{{survey_per_lecture3}}</h4>
+
+
+
+    <ion-list>
+      <ion-radio ng-model="choice" ng-change="getvalueradio(choice)" ng-value="'1'">1</ion-radio>
+      <ion-radio ng-model="choice" ng-change="getvalueradio(choice)" ng-value="'2'">2</ion-radio>
+      <ion-radio ng-model="choice" ng-change="getvalueradio(choice)" ng-value="'3'">3</ion-radio>
+      <ion-radio ng-model="choice" ng-change="getvalueradio(choice)" ng-value="'4'">4</ion-radio>
+      <ion-radio ng-model="choice" ng-change="getvalueradio(choice)" ng-value="'5'">5</ion-radio>
+    </ion-list>
+
+
+
+    <button ng-click="savesurvey()" class="button button-block button yellow_color" style="width: 100%; margin-top: 20px">
+      <b> <a style="color: white">Save</a> </b>
+    </button>
+
+
+
+
+
+  </ion-content>
+
+
+</ion-view>

@@ -1,0 +1,55 @@
+{
+  "name": "POA",
+  "version": "0.0.1",
+  "description": "An Ionic project",
+  "devDependencies": {
+    "gulp": "^3.5.6",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "cordova-android": "~6.3.0",
+    "cordova-plugin-actionsheet": "git+https://github.com/EddyVerbruggen/cordova-plugin-actionsheet.git",
+    "cordova-plugin-calendar": "git+https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin.git",
+    "cordova-plugin-camera": "^2.4.1",
+    "cordova-plugin-compat": "^1.2.0",
+    "cordova-plugin-device": "^1.1.4",
+    "cordova-plugin-dialogs": "^1.3.3",
+    "cordova-plugin-email-composer": "git+https://github.com/katzer/cordova-plugin-email-composer.git",
+    "cordova-plugin-file": "^5.0.0",
+    "cordova-plugin-file-transfer": "^1.7.0",
+    "cordova-plugin-image-picker": "git+https://github.com/wymsee/cordova-imagePicker.git",
+    "cordova-plugin-splashscreen": "^4.0.3",
+    "cordova-plugin-statusbar": "^2.2.1",
+    "cordova-plugin-whitelist": "git+https://github.com/apache/cordova-plugin-whitelist.git",
+    "cordova-sqlite-storage": "^2.0.4",
+    "ionic-plugin-keyboard": "^2.2.1",
+    "phonegap-plugin-barcodescanner": "git+https://github.com/phonegap/phonegap-plugin-barcodescanner.git"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-whitelist": {},
+      "ionic-plugin-keyboard": {},
+      "phonegap-plugin-barcodescanner": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-image-picker": {},
+      "cordova-sqlite-storage": {},
+      "cordova-plugin-actionsheet": {},
+      "cordova-plugin-calendar": {
+        "CALENDAR_USAGE_DESCRIPTION": " "
+      },
+      "cordova-plugin-email-composer": {},
+      "cordova-plugin-file": {},
+      "cordova-plugin-file-transfer": {}
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}

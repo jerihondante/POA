@@ -1,0 +1,82 @@
+<ion-view ng-controller="SponsorinfoCtrl">
+
+
+
+  <ion-header-bar align-title="left" class="bar bar-header bar-assertive">
+    <div class="buttons">
+      <a href="#/app/sponsors" nav-direction="back">
+        <button class="button button-icon icon ion-ios-arrow-back" ></button></a>
+    </div>
+    <h1 class="title">SPONSORS</h1>
+
+  </ion-header-bar>
+
+
+  <ion-content style="padding: 10px">
+
+
+
+
+    <div class="card" style="padding: 20px">
+
+      <center>
+
+        <img src="{{sponsorinfo_list[sponsorinfoindex].image}}" style="width: 25%; height: 25%">
+
+        <p>{{sponsorinfo_list[sponsorinfoindex].desc}}</p>
+
+      </center>
+
+    </div>
+
+
+
+
+
+    <div class="card" style="padding: 10px">
+
+
+      <b>Contact</b>
+      <div style="width: 100%; height: 1px; background-color: black">
+
+      </div>
+
+
+      <a class="item item-icon-left">
+        <i class="icon ion-ios-world"></i>
+        <h2>{{sponsorinfo_list[sponsorinfoindex].web}}</h2>
+      </a>
+
+      <a class="item item-icon-left">
+        <i class="icon ion-social-facebook"></i>
+        <h2>{{sponsorinfo_list[sponsorinfoindex].facebook}}</h2>
+      </a>
+
+
+      <a class="item item-icon-left">
+        <i class="icon ion-paper-airplane"></i>
+        <h2>{{sponsorinfo_list[sponsorinfoindex].email}}</h2>
+      </a>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+  </ion-content>
+
+
+
+
+</ion-view>
+

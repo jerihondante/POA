@@ -1,0 +1,72 @@
+<ion-view class="bg_logoutimg" hide-nav-bar="true" ng-controller="LoginuserCtrl">
+
+
+
+    <ion-content scrollbar-x="false" scrollbar-y="false">
+
+
+
+        <center>
+
+            <div style="margin-top: 30px">
+
+                <img ng-src="img/bg_poaicon.png" height="50%" width="50%">
+
+
+                <b>
+                <p style="color: white; font-size: 30px; margin-top: 30px">POA 68TH ANNUAL</p>
+                <p style="color: white; font-size: 30px">COVENTION </p>
+                </b>
+
+
+
+                <input id="input_username" type="text" name="firstname" placeholder="Username" style="width: 85%; height: 40px; padding-left: 10px; margin-top: 30px; opacity: .5">
+                <br>
+                <input id="input_password" type="password" name="lastname" placeholder="Password" style="width: 85%;; height: 40px; padding-left: 10px; opacity: .5">
+
+
+                <button ng-click="gotomenu()" class="button button-block button yellow_color" style="width: 85%; margin-top: 20px">
+                <b> <a style="color: white">LOGIN</a> </b>
+                </button>
+
+
+
+                <div style="position: relative">
+
+                        <div ng-show="false" style="position: absolute; left: 20px">
+                            <button ng-click="gotoforgot()" nav-direction="forward" class="button button-clear button-light">
+                                <b> <a style="color: white; font-size: 12px"> Forgot Password? </a></b>
+                            </button>
+                        </div>
+
+
+                        <div ng-show="false" style="position: absolute; right: 20px">
+                            <button class="button button-clear button-light" href="#" onclick="window.open('http://philortho.org/Registration/index?id=20', '_system', 'location=yes'); return false;">
+                                <b> <a style="color: white; font-size: 12px"> Register </a></b>
+                            </button>
+
+                        </div>
+
+
+
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+        </center>
+
+
+
+
+
+
+    </ion-content>
+</ion-view>
+

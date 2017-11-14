@@ -1,0 +1,220 @@
+<ion-side-menus enable-menu-with-back-views="false" ng-controller="MenuCtrl">
+  <ion-side-menu-content >
+    <ion-nav-bar class="bar-balanced">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+
+        <p class="title-left" style="color: white; font-size: 18px; margin-left: 20px;margin-top: 6px">{{menutitle}}</p>
+
+      </ion-nav-buttons>
+
+
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+
+
+
+
+    <ion-content style="background-color: #212e37">
+
+
+
+
+
+      <div ng-click="gotoprofile()" style="margin-top: 30px; margin-bottom: 20px">
+
+
+        <center>
+          <img src="img/imgprofile.png" width="40%" height="40%"/>
+        </center>
+
+
+        <center>
+        <b> <p style="font-size: 20px; color: white">{{user_profile.first_name}} {{user_profile.middle_initial}} {{user_profile.last_name}} {{user_profile.suffix}}</p> </b>
+        </center>
+
+        <center>
+          <p style="color: white">{{user_profile.address}}</p>
+        </center>
+
+
+        <center>
+
+          <div style="padding-left: 70px; padding-right: 70px" class="row">
+
+            <div class="col-33">
+
+              <div>
+
+                <center>
+                <p style="color: white">Likes</p>
+               <b> <p style="font-size: 20px; color: white">1000</p> </b>
+                </center>
+
+              </div>
+
+            </div>
+
+
+            <div class="col-33">
+              <div>
+
+                <img src="img/img_line.png" width="40%" height="50px"/>
+
+              </div>
+            </div>
+
+
+            <div class="col-33">
+              <div>
+
+                <center>
+                <p style="color: white">CPD</p>
+               <b> <p style="font-size: 20px; color: white">{{user_cpd}}</p> </b>
+                </center>
+
+              </div>
+            </div>
+
+
+
+          </div>
+
+        </center>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+      <div style="padding: 10px; margin-left: 20px">
+        <img class="vertical-mid" src="img/icon_dashboard.png" width="25px"/>
+        <b> <a ng-href="#/app/dashboard" menu-close style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">DASHBOARD</a> </b>
+      </div>
+
+
+        <div style="padding: 10px; margin-left: 20px"  menu-close>
+          <img class="vertical-mid" src="img/icon_scan.png" width="25px"/>
+          <b> <a ng-href="#/app/scancode" menu-close style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">SCAN CODE</a> </b>
+        </div>
+
+
+
+      <div style="padding: 10px; margin-left: 20px" class="cart_text">
+        <img class="vertical-mid" src="img/icon_profile.png" width="25px"/>
+        <b> <a menu-close href="#/app/editprofile" style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">EDIT PROFILE</a> </b>
+      </div>
+
+
+      <div style="padding: 10px; margin-left: 20px" class="cart_text">
+        <img class="vertical-mid" src="img/icon_calendar.png" width="25px"/>
+        <b> <a menu-close href="#/app/evenschedule" style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">EVENT SCHEDULE</a> </b>
+      </div>
+
+
+      <div style="padding: 10px; margin-left: 20px" class="cart_text">
+        <img class="vertical-mid" src="img/icon_speakers.png" width="25px"/>
+        <b> <a menu-close href="#/app/speakers" style="margin-left: 10px; color: white ; text-decoration: none" class="vertical-mid number-count">SPEAKERS</a> </b>
+      </div>
+
+
+      <div style="padding: 10px; margin-left: 20px" class="cart_text">
+        <img class="vertical-mid" src="img/icon_attendess.png" width="25px"/>
+        <b> <a menu-close href="#/app/attendees" style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">ATTENDEES</a> </b>
+      </div>
+
+
+
+      <div style="padding: 10px; margin-left: 20px" class="cart_text">
+        <img class="vertical-mid" src="img/icon_map.png" width="25px"/>
+        <b> <a menu-close href="#/app/map" style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">MAP</a> </b>
+      </div>
+
+
+
+      <div style="padding: 10px; margin-left: 20px" class="cart_text">
+        <img class="vertical-mid" src="img/icon_schedule.png" width="25px"/>
+        <b> <a menu-close href="#/myschedule" style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">MY SCHEDULE</a> </b>
+      </div>
+
+
+
+
+      <div style="padding: 10px; margin-left: 20px" class="cart_text">
+        <img class="vertical-mid" src="img/exibitor.png" width="25px"/>
+        <b> <a menu-close href="#/app/exibitors" style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">EXHIBITORS</a> </b>
+      </div>
+
+
+
+      <div style="padding: 10px; margin-left: 20px" class="cart_text" menu-close href="#/app/sponsors">
+        <img class="vertical-mid" src="img/icon_sponsor.png" width="25px"/>
+        <b> <a menu-close href="#/app/sponsors" style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">SPONSORS</a> </b>
+      </div>
+
+
+      <div style="padding: 10px; margin-left: 20px" class="cart_text">
+        <img class="vertical-mid" src="img/icon_gallery.png" width="25px"/>
+        <b> <a menu-close href="#/gallery" style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">GALLERY</a> </b>
+      </div>
+
+
+      <div style="padding: 10px; margin-left: 20px" class="cart_text">
+        <img class="vertical-mid" src="img/icon_note.png" width="25px"/>
+        <b> <a menu-close href="#/app/notes" style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">NOTES</a> </b>
+      </div>
+
+
+      <div style="padding: 10px; margin-left: 20px" class="cart_text">
+        <img class="vertical-mid" src="img/icon_file.png" width="25px"/>
+        <b> <a menu-close href="#/app/files" style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">FILES</a> </b>
+      </div>
+
+
+      <div style="padding: 10px; margin-left: 20px">
+        <img class="vertical-mid" src="img/icon_privacy.png" width="25px"/>
+        <b> <a menu-close href="#/app/privacypolicy" style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">PRIVACY POLICY</a> </b>
+      </div>
+
+
+      <div style="padding: 10px; margin-left: 20px" class="cart_text" >
+        <img class="vertical-mid" src="img/icon_terms.png" width="25px"/>
+        <b> <a menu-close href="#/app/termsandconditions" style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">TERMS AND CONDITIONS</a> </b>
+      </div>
+
+
+
+      <div style="padding: 10px; margin-left: 20px" class="cart_text">
+        <img class="vertical-mid" src="img/icon_forum.png" width="25px"/>
+        <b> <a menu-close href="#/app/openforum" style="margin-left: 10px; color: white; text-decoration: none" class="vertical-mid number-count">OPEN FORUM</a> </b>
+      </div>
+
+
+      <div style="padding: 10px; margin-left: 20px" class="cart_text" >
+        <img class="vertical-mid" src="img/icon_logout.png" width="25px"/>
+       <b> <a ng-click="logoutuser()" style="margin-left: 10px; color: white" class="vertical-mid number-count">LOGOUT</a> </b>
+      </div>
+
+
+
+
+
+
+
+
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

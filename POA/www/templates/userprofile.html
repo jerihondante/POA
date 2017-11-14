@@ -1,0 +1,240 @@
+<ion-view ng-controller="UserprofileCtrl">
+
+
+
+  <ion-header-bar align-title="left" class="bar bar-header bar-assertive">
+    <div class="buttons">
+      <a href="#/app/dashboard" nav-direction="back">
+        <button class="button button-icon icon ion-ios-arrow-back" ></button></a>
+    </div>
+    <h1 class="title">PROFILE</h1>
+
+  </ion-header-bar>
+
+
+  <ion-content>
+
+
+
+
+    <div style="height: 160px" class="bg_speaker_img">
+
+      <div style="padding-top: 20px">
+
+        <center>
+          <img class="custom-avatar" ng-src="img/imgprofile.png">
+          <div>
+            <b> <a style="color: white">{{user_profile.first_name}} {{user_profile.middle_initial}} {{user_profile.last_name}}</a> </b> <img ng-click="gotoedit()" style="width: 3%" src="img/btn_edit.png"/> <a style="color: white; font-size: 10px">Edit</a>
+            <br>
+             <a style="color: white; font-size: 12px"><b>{{user_profile.address}}</b></a>
+          </div>
+
+
+        </center>
+
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="color_blue" style="height: 70px; width: 100%; position: relative">
+
+
+      <div class="row">
+
+        <div class="col-33">
+
+          <div>
+
+            <center>
+              <p style="color: white">Likes</p>
+              <b> <p style="font-size: 20px; color: white">1000</p> </b>
+            </center>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-33">
+          <div>
+
+            <center>
+              <img src="img/img_line.png" width="40%" height="50px"/>
+            </center>
+
+
+          </div>
+        </div>
+
+
+        <div class="col-33">
+          <div>
+
+            <center>
+              <p style="color: white">Likes</p>
+              <img src="img/icon_like.png" style="height: 20%; width: 20%"/>
+            </center>
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div style="padding: 20px">
+
+      <div class="row">
+
+        <div class="col-60" style="padding-right: 10px">
+          <p> {{user_profile.description}} </p>
+        </div>
+
+        <div class="col-30">
+          <b> Title</b>
+          <br>
+          {{user_profile.title}}
+
+          <br>
+          <b>Chapter</b>
+          <br>
+          {{user_profile.chapter}}
+
+
+          <br>
+          <b>Subspecialty</b>
+          <br>
+          {{user_profile.subspecialty}}
+
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div style="width: 100%; padding: 10px; background-color: lightgray">
+
+
+      <div class="row">
+
+        <div class="col-25">
+          <a href="#/myschedule">
+            <center>
+              <img class="vertical-mid" src="img/icon_schedule.png" width="25px"/>
+            </center>
+            <center>
+              <a style="color: black"> My Schedules</a>
+            </center>
+          </a>
+        </div>
+
+
+        <div class="col-25">
+          <a href="#/app/notes">
+            <center>
+              <img class="vertical-mid" src="img/icon_note.png" width="25px"/>
+            </center>
+            <center>
+              <a style="color: black"> My Notes</a>
+            </center>
+          </a>
+        </div>
+
+
+        <div class="col-25">
+          <a href="#/app/files">
+            <center>
+              <img class="vertical-mid" src="img/icon_file.png" width="25px"/>
+            </center>
+            <center>
+              <a style="color: black"> My Files</a>
+            </center>
+          </a>
+        </div>
+
+
+        <div class="col-25">
+          <a ng-click="gotocpd()">
+            <center>
+              <img class="vertical-mid" src="img/icon_cpd.png" width="25px"/>
+            </center>
+            <center>
+             <a style="color: black">My CPD</a>
+            </center>
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div style="padding: 20px">
+
+      <b>Photo Feeds</b>
+
+
+      <div class="row" ng-repeat="image in attendees_photos" ng-if="$index % 2 === 0">
+
+        <div class="col-50" ng-if="$index < attendees_photos.length">
+          <img style="height: 95%; width: 95%" ng-src="{{attendees_photos[$index].image}}">
+        </div>
+
+        <div class="col-50" ng-if="$index + 1 < attendees_photos.length">
+          <img style="height: 95%; width: 95%" ng-src="{{attendees_photos[$index + 1].image}}">
+        </div>
+
+
+      </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+  </ion-content>
+
+
+
+
+</ion-view>
+

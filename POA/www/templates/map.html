@@ -1,0 +1,18 @@
+<ion-view ng-controller="MapCtrl">
+
+  <ion-content>
+
+    <label class="item item-input item-select">
+      <div class="input-label">
+        Select Map
+      </div>
+      <select ng-model="category" ng-change="show_category_class(category.name)" ng-options="c.name for c in event_maps"></select>
+    </label>
+
+
+
+    <img style="width: 100%" ng-src="http://philortho.com/{{mapsimage}}">
+
+
+  </ion-content>
+</ion-view>

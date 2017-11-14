@@ -1,0 +1,289 @@
+<ion-view class="bg_dashboard" ng-controller="DashboardCtrl">
+
+
+
+  <ion-content>
+
+
+
+    <div style="padding-left: 10px; padding-right: 10px;width: 200%">
+
+      <p style="color: #009688; font-size: 80px; margin-top: 30px; margin-left: 10px">POA</p>
+
+      <p style="margin-left: 12px; margin-top: 40px">68th Annual Convention <br> Philipine Orthopaedic Association</p>
+
+     <b> <p style="margin-left: 12px;font-size: 16px">November  <a style="color: red; font-size: 22px">15-18</a>, 2017</p> </b>
+
+
+      <p style="margin-left: 12px; margin-top: 10px">Edsa Shangri-La Hotel <br> Ortigas Centre, Mandaluyong City</p>
+
+
+        <div style="position: absolute; right: 10px; top: 20px; left: 60%">
+
+            <img ng-src="img/bg_poaicon.png" height="90%" width="90%">
+
+        </div>
+
+
+    </div>
+
+
+
+      <div style="padding-left: 10px; padding-right: 10px;margin-left: 12px; margin-right: 12px; margin-top: 20px">
+
+          <ion-list>
+
+              <ion-item style="color: white" class="color_green ite">
+                <b>Announcement</b>
+              </ion-item>
+              <ion-item style="color: white" class="color_green">
+                  <div class="row">
+                      <div class="col-75">
+                          <p style="color: white">{{announcements_dash[0].entry_title}}</p>
+                      </div>
+
+                      <div class="col-25">
+                          <a style="position: absolute;right: 10px; color: white"> {{announcements_dash[0].entry_date}} </a>
+                      </div>
+
+                  </div>
+              </ion-item>
+              <ion-item style="color: white" class="color_green">
+                  <div class="row">
+                      <div class="col-75">
+                          <p style="color: white">{{announcements_dash[1].entry_title}}</p>
+                      </div>
+
+                      <div class="col-25">
+                          <a style="position: absolute;right: 10px; color: white"> {{announcements_dash[1].entry_date}} </a>
+                      </div>
+
+                  </div>
+              </ion-item>
+              <ion-item style="color: white" class="color_green">
+                  <div class="row">
+                      <div class="col-75">
+                          <p style="color: white">{{announcements_dash[2].entry_title}}</p>
+                      </div>
+
+                      <div class="col-25">
+                          <a style="position: absolute;right: 10px; color: white"> {{announcements_dash[2].entry_date}} </a>
+                      </div>
+
+                  </div>
+              </ion-item>
+              <ion-item style="color: white" class="color_green">
+                  <div class="row">
+                      <div class="col-75">
+                          <p style="color: white">{{announcements_dash[3].entry_title}}</p>
+                      </div>
+
+                      <div class="col-25">
+                          <a style="position: absolute;right: 10px; color: white"> {{announcements_dash[3].entry_date}} </a>
+                      </div>
+
+                  </div>
+              </ion-item>
+
+
+          </ion-list>
+
+      </div>
+
+
+
+
+
+
+
+
+      <div style="padding-left: 10px; padding-right: 10px;margin-left: 12px; margin-right: 12px; margin-top: 20px">
+
+          <ion-list>
+
+
+
+
+              <ion-item style="color: white" class="color_green ite">
+                  <b>Your Schedules</b>
+              </ion-item>
+              <ion-item style="color: white" class="color_green">
+                  <div class="row">
+                      <div class="col-75">
+                          <p style="color: white">{{dash_event_sessions[0].title}}</p>
+                      </div>
+
+                      <div class="col-25">
+                          <a style="position: absolute;right: 10px; color: white"> {{dash_event_sessions[0].date}} </a>
+                      </div>
+
+                  </div>
+
+              </ion-item>
+              <ion-item style="color: white" class="color_green">
+
+                  <div class="row">
+                      <div class="col-75">
+                          <p style="color: white">{{dash_event_sessions[1].title}}</p>
+                      </div>
+
+                      <div class="col-25">
+                          <a style="position: absolute;right: 10px; color: white"> {{dash_event_sessions[1].date}} </a>
+                      </div>
+
+                  </div>
+              </ion-item>
+              <ion-item style="color: white" class="color_green">
+                  <div class="row">
+                      <div class="col-75">
+                          <p style="color: white">{{dash_event_sessions[2].title}}</p>
+                      </div>
+
+                      <div class="col-25">
+                          <a style="position: absolute;right: 10px; color: white"> {{dash_event_sessions[2].date}} </a>
+                      </div>
+
+                  </div>
+              </ion-item>
+              <ion-item style="color: white" class="color_green">
+                  <div class="row">
+                      <div class="col-50">
+                        <p style="color: white">{{dash_event_sessions[3].title}}</p>
+                      </div>
+
+                      <div class="col-50">
+                          <a style="position: absolute;right: 10px; color: white"> {{dash_event_sessions[3].date}} </a>
+                      </div>
+
+                  </div>
+              </ion-item>
+
+
+          </ion-list>
+
+      </div>
+
+
+
+
+      <div style="padding-left: 10px; padding-right: 10px;margin-left: 20px; margin-right: 20px; margin-top: 20px; background-color: red; padding: 10px">
+
+          <h4 style="color: white">Welcome Message</h4>
+
+          <h6 style="color: white">It is with a great pleasure and distinct honor, for me, to convey my heartfelt felicitations and congratulations to the officers and members of the Philippine Orthopaedic Association, Inc., a surgical specialty organization of the Philippine Medical Association, as it holds its 68th Annual Congress on November 15 to 18, 2017 at the EDSA Shangri-La Hotel, Mandaluyong City with the theme entitled: “The Aging Bone:  They Are Getting Older, Are We Getting Smarter? ”.
+              Your chosen theme aptly expresses, if I may be allowed to say so, your collective desire to revisit current concepts, practices and approaches in managing disease conditions in your field of interest and specialization and aware of the fact that new technologies abound to provide better and better health outcomes. In other words, the theme, simple as it may seem, carries symbolic words or phrases that also connote the need to level up individual skills or to consider the increasing range of services outside the traditional ways by which an orthopedic surgeon may possibly use to provide them. The passage of the Continuing  Professional Development Law about a year ago is one of the compelling reasons why professionals, particularly specialists, should continue honing skills to meet the changing needs and expectations of society. I am  confident, therefore, that the program of activities crafted by the organizers will bring about fruitful discussions among your peers that will be enriching and memorable to all the participants.
+              For and on behalf of the other national officers and members of the board of governors of  the Philippine Medical Association, I would like to congratulate, once more, all concern for the successful realization of your 2017 convention.
+              Thank you and more power to Philippine Orthopaedic Association, Inc.! Mabuhay!
+          </h6>
+
+      </div>
+
+
+
+
+
+
+
+      <div ng-show="false" style="padding-left: 10px; padding-right: 10px;margin-left: 12px; margin-right: 12px; margin-top: 20px">
+
+          <ion-list>
+
+              <ion-item style="color: white" class="color_green ite">
+                  <b>Surveys</b>
+              </ion-item>
+              <ion-item style="color: white" class="color_green">
+                  Sample
+                  <a style="position: absolute;right: 10px; color: white"> 11-11-16 </a>
+              </ion-item>
+              <ion-item style="color: white" class="color_green">
+                  Sample
+                  <a style="position: absolute;right: 10px; color: white"> 11-11-16 </a>
+              </ion-item>
+              <ion-item style="color: white" class="color_green">
+                  Sample
+                  <a style="position: absolute;right: 10px; color: white"> 11-11-16 </a>
+              </ion-item>
+              <ion-item style="color: white" class="color_green">
+                  Sample
+                  <a style="position: absolute;right: 10px; color: white"> 11-11-16 </a>
+              </ion-item>
+
+
+          </ion-list>
+
+      </div>
+
+
+
+
+
+
+      <div style="padding-left: 10px; padding-right: 10px;margin-left: 14px; margin-right: 12px; margin-top: 20px">
+
+
+          <div class="row">
+
+
+              <div ng-click="gotolinknote()" class="col-33">
+
+                  <img ng-src="img/icon_dash_notes.png" height="90%" width="90%">
+
+              </div>
+
+              <div ng-click="gotolinkfiles()" class="col-33">
+
+                  <img ng-src="img/icon_dash_files.png" height="90%" width="90%">
+
+              </div>
+
+              <div ng-click="gotolinkgalery()" class="col-33">
+
+                  <img ng-src="img/icon_dash_galery.png" height="90%" width="90%">
+
+              </div>
+
+
+          </div>
+
+      </div>
+
+
+
+
+
+
+
+
+      <div style="padding-left: 10px; padding-right: 10px;margin-left: 12px; margin-right: 12px; margin-top: 10px">
+
+
+          <img ng-click="gotolinkevensched()" ng-src="img/bg_dash_evensched.png" height="100%" width="100%">
+
+
+      </div>
+
+
+      <div style="padding-left: 10px; padding-right: 10px;margin-left: 12px; margin-right: 12px; margin-top: 10px">
+
+
+          <img ng-click="gotolinkmysched()" ng-src="img/bg_dash_mysched.png" height="100%" width="100%">
+
+
+      </div>
+
+
+
+
+      <div class="color_green ite"  style="margin-top: 10px; padding-left: 20px; padding-bottom: 1px; padding-top: 10px">
+
+
+          <b><p style="color: white"> 2017 PHILORTHQ Designed by EWM</p></b>
+
+
+      </div>
+
+
+
+
+  </ion-content>
+</ion-view>

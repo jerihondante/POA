@@ -1,0 +1,85 @@
+<ion-view ng-controller="NotesCtrl">
+
+
+
+  <ion-content>
+
+
+    <div class="row row_adjust" ng-repeat="note in note_session" ng-if="$index % 2 === 0">
+      <div class="col-50" ng-if="$index < note_session.length">
+
+
+        <div ng-click="emailnotes($index)" class="card padding" style="background-color: yellow">
+
+
+          <p style="line-height: 20px; height: 20px; overflow: hidden">{{note_session[$index].session_title}}</p>
+          <p style="line-height: 40px; height: 40px; overflow: hidden">{{note_session[$index].my_note}}</p>
+          <div>
+            <div class="row">
+              <div ng-show="false" class="col-33">
+
+                <img src="img/icon_download.png">
+
+              </div>
+
+              <div class="col-33">
+
+                <img src="img/icon_share.png" style="width: 50%; height: 70%">
+
+              </div>
+
+              <div class="col-33">
+
+                <img src="img/icon_delete.png" style="width: 50%; height: 70%">
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-50" ng-if="$index + 1 < note_session.length">
+
+        <div ng-click="emailnotes($index + 1)" class="card padding" style="background-color: yellow">
+
+          <p style="line-height: 20px; height: 20px; overflow: hidden">{{note_session[$index + 1].session_title}}</p>
+          <p style="line-height: 40px; height: 40px; overflow: hidden">{{note_session[$index + 1].my_note}}</p>
+
+          <div>
+            <div class="row">
+              <div ng-show="false" class="col-33">
+
+                <img src="img/icon_download.png">
+
+              </div>
+
+              <div class="col-33">
+
+                <img src="img/icon_share.png" style="width: 50%; height: 70%">
+
+              </div>
+
+              <div class="col-33">
+
+                <img src="img/icon_delete.png" style="width: 50%; height: 70%">
+
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+  </ion-content>
+</ion-view>

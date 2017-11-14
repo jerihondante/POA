@@ -1,0 +1,112 @@
+<ion-view style="background-color: lightgray" ng-controller="SpeakerinfosCtrl">
+
+
+  <ion-header-bar align-title="left" class="bar bar-header bar-assertive">
+    <div class="buttons">
+      <a href="#/app/speakers" nav-direction="back">
+        <button class="button button-icon icon ion-ios-arrow-back" ></button></a>
+    </div>
+    <h1 class="title">SPEAKERS - DEATAILS</h1>
+
+  </ion-header-bar>
+
+
+
+  <ion-content>
+    <div style="height: 160px" class="bg_speaker_img">
+
+      <div style="padding-top: 20px">
+
+        <center>
+          <img class="custom-avatar" ng-src="http://philortho.com{{speakers_list[selected_speaker].avatar}}" onerror="this.src='img/imgprofile.png'">
+          <div>
+          <b> <a style="color: white">{{speakers_list[selected_speaker].speaker_name}}</a> </b>
+          </div>
+
+
+        </center>
+
+
+      </div>
+
+    </div>
+
+
+
+
+    <div style="height: 35px; width: 100%; background-color: white; position: relative">
+
+
+
+
+      <div class="row">
+
+        <div class="col-50">
+          <div style="margin-top: 3px"></div>
+          <a style="color: black; margin-left: 20px">RATE THIS</a>
+
+        </div>
+
+        <div class="col-50" style="text-align: right; padding-right: 20px">
+
+          <div class="row">
+
+            <div class="col-50">
+              <img ng-src="img/icon_star_5.png" width="90%">
+            </div>
+
+            <div class="col-50">
+                5 Reviews
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+
+    <div style="padding: 20px">
+
+      Profile
+
+    <!--  <div class="color_blue" style="width: 100%; margin-top: 10px; padding: 10px">
+
+
+        {{speakers_list[selected_speaker].speaker_info}}
+
+
+      </div>  -->
+
+
+      <ul class="list">
+
+        <li  class="color_blue" style="width: 100%; margin-top: 10px; padding: 10px" ng-repeat="item in speakers_list[selected_speaker].lectures">
+
+          <p style="text-align: justify">{{speakers_list[selected_speaker].lectures[$index].lecture_title}}</p>
+
+        </li>
+
+
+      </ul>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+  </ion-content>
+</ion-view>

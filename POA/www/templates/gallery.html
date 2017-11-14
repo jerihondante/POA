@@ -1,0 +1,49 @@
+<ion-view ng-controller="GalleryCtrl">
+
+
+
+  <ion-header-bar align-title="left" class="bar bar-header bar-assertive">
+    <div class="buttons">
+      <a  href="#/app/dashboard" nav-direction="back">
+        <button class="button button-icon icon ion-ios-arrow-back" ></button></a>
+    </div>
+    <h1 class="title">GALLERY</h1>
+
+    <div class="buttons">
+      <a  ng-click="btn_gotocamera()" nav-direction="back">
+        <button class="button button-icon icon ion-camera" ></button></a>
+    </div>
+
+  </ion-header-bar>
+
+
+
+
+  <ion-content class="padding" lazy-scrollbar-x="false" scrollbar-y="false">
+
+
+    <div class="row" ng-repeat="image in gallery_photos" ng-if="$index % 3 === 0">
+
+      <div class="col-33" ng-if="$index < gallery_photos.length">
+        <img style="height:80px; width: 95%" ng-src="{{gallery_photos[$index]}}">
+      </div>
+
+      <div class="col-33" ng-if="$index + 1 < gallery_photos.length">
+        <img style="height: 80px; width: 95%" ng-src="{{gallery_photos[$index + 1]}}">
+      </div>
+
+      <div class="col-33" ng-if="$index + 2 < gallery_photos.length">
+        <img style="height: 80px; width: 95%" ng-src="{{gallery_photos[$index + 1]}}">
+      </div>
+
+
+    </div>
+
+
+
+
+
+  </ion-content>
+
+
+</ion-view>

@@ -1,0 +1,194 @@
+<ion-view ng-controller="SponsorsCtrl">
+
+
+  <ion-content>
+
+
+    <div style="margin-top: 20px">
+
+      <center>
+        <div ng-click="gotosponsorinfo(0)">
+
+          <img ng-src="http://philortho.com/{{platinum_sponsor.company_logo}}" width="50%"/>
+
+        </div>
+
+      </center>
+
+
+      <center>
+        <b>[{{platinum_sponsor.sponsor_type}}]</b>
+      </center>
+
+
+
+
+
+      <div style="margin-top: 30px">
+
+
+
+
+          <div ng-click="gotosponsorinfo(1)">
+
+            <center>
+
+                <img ng-src="http://philortho.com/{{gold_sponsor.company_logo}}" width="45%"/>
+
+
+            </center>
+
+
+            <center>
+              <b>[{{gold_sponsor.sponsor_type}}]</b>
+            </center>
+
+
+          </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div style="margin-top: 30px">
+
+        <div class="row">
+
+
+
+          <div ng-click="gotosponsorinfo(0)" class="col-50">
+
+            <center>
+
+                <img ng-src="http://philortho.com/{{titanium_sponsor1.company_logo}}" width="70%"/>
+
+            </center>
+
+            <center>
+              <b>[TITANIUM]</b>
+            </center>
+
+          </div>
+
+
+
+          <div ng-click="gotosponsorinfo(0)" class="col-50">
+
+            <center>
+
+                <img ng-src="http://philortho.com/{{titanium_sponsor2.company_logo}}" width="70%"/>
+
+            </center>
+            <center>
+              <b>[TITANIUM]</b>
+            </center>
+
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+
+
+
+
+      <div style="margin-top: 30px">
+        <div ng-click="gotosponsorinfo(1)">
+
+          <center>
+
+            <img ng-src="http://philortho.com/{{regular_sponsor.company_logo}}" width="25%"/>
+
+          </center>
+
+
+          <center>
+            <b>[{{regular_sponsor.sponsor_type}}]</b>
+          </center>
+
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <div style="margin-top: 20px">
+
+        <div class="row">
+
+
+          <div ng-click="gotosponsorinfo(0)" class="col-50">
+
+            <center>
+
+                <img ng-src="http://philortho.com/{{special_sponsor1.company_logo}}" width="40%"/>
+
+            </center>
+
+            <center>
+              <b>[SPECIAL]</b>
+            </center>
+
+          </div>
+
+
+          <div ng-click="gotosponsorinfo(0)" class="col-50">
+
+            <center>
+
+                <img ng-src="http://philortho.com/{{special_sponsor2.company_logo}}" width="40%"/>
+
+            </center>
+
+            <center>
+              <b>[SPECIAL]</b>
+            </center>
+
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+  </ion-content>
+</ion-view>
